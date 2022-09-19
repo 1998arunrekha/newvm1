@@ -32,8 +32,8 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
-resource "azurerm_windows_virtual_machine" "example" {
-  name                = "example-machine"
+resource "azurerm_windows_virtual_machine" "vm0111" {
+  name                = "newvm11"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_F2"
