@@ -1,6 +1,6 @@
 # creating resource group
 resource "azurerm_resource_group" "rg" {
-  name     = "vm1"
+  name     = "rg1"
   location = "West Europe"
 }
 
@@ -39,9 +39,9 @@ resource "azurerm_windows_virtual_machine" "vm0111" {
   size                = "Standard_F2"
   admin_username      = "adminarun"
   admin_password      = "Aruna@123456"
-  /*network_interface_ids = [
-    azurerm_network_interface.example.id,
-  ]*/
+  network_interface_ids = [
+    azurerm_network_interface.nic11.id,
+  ]
 
   os_disk {
     caching              = "ReadWrite"
